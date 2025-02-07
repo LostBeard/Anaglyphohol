@@ -5,7 +5,17 @@ Anaglyphohol is a web browser extension that let's you view images on the web in
 ## Development
 Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks to the amazing monocular depth estimation machine learning model [Depth Anything](https://huggingface.co/depth-anything/Depth-Anything-V2-Small).
 
-Currently only Google Chrome on Windows ahs been tested. Firefox desktop support is planned.
+## Known issues
+- Currently only Google Chrome on Windows ahs been tested. Firefox desktop support is planned. 
+- Some websites or some images on websites do not work. Ex. Google Photos does not work.
+
+## Notes
+Anaglyphohol adds a border to images it identifies for conversion when enabled. 
+- Orange - queued for conversion
+- Green - already converted and showing the anaglyph image
+- Blue - the iamge currently being converted
+- Red - conversion failed
+- None - Not supported (too small... less than 100x100), or not an `<img>` element.
 
 ## Screenshots
 ![Screenshot Bing Red Cyan](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
