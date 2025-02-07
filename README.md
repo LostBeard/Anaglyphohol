@@ -9,10 +9,10 @@ Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks
 ![Screenshot 4](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
 
 
-# Support for You
+# Get Support
 Issues and feature requests can be submitted [here](https://github.com/LostBeard/Anaglyphohol/issues) on GitHub. We are always here to help.
 
-# Support for Us
+# Support Us
 Sponsor us via Github Sponsors to give us more time to work on Anaglyphohol and other open source projects. Or buy us a cup of coffee via Paypal. All support is greatly appreciated! ♥
 
 [![GitHub Sponsor](https://img.shields.io/github/sponsors/LostBeard?label=Sponsor&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/LostBeard)
