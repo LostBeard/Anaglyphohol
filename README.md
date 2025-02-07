@@ -13,7 +13,7 @@ Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks
 Anaglyphohol adds a border to images it identifies for conversion when enabled. 
 - Orange - queued for conversion
 - Green - already converted and showing the anaglyph image
-- Blue - the iamge currently being converted
+- Blue - the image currently being converted
 - Red - conversion failed
 - None - Not supported (too small... less than 100x100), or not an `<img>` element.
 
