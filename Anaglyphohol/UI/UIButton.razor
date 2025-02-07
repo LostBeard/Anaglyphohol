@@ -1,0 +1,49 @@
+﻿<button title="@Title" disabled="@Disabled" @ref=_ref class="@Class" style="@Style" onclick="@Clicked">
+    @if (!string.IsNullOrEmpty(Image))
+    {
+        <UIImage Style="@ImageStyle" Src="@Image" />
+    }
+    else if (!string.IsNullOrEmpty(Icon))
+    {
+        <UIIcon Style="@IconStyle" Icon="@Icon" />
+    }
+</button>
+
+@code {
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? Image { get; set; }
+
+    [Parameter]
+    public string? Icon { get; set; }
+
+    [Parameter]
+    public string Class { get; set; } = "";
+
+    [Parameter]
+    public string Style { get; set; } = "";
+
+    [Parameter]
+    public string ImageStyle { get; set; } = "";
+
+    [Parameter]
+    public string IconStyle { get; set; } = "";
+
+    [Parameter]
+    public bool Disabled { get; set; }
+
+    ElementReference _ref;
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> Click { get; set; }
+
+    void Clicked(MouseEventArgs mouseEventArgs)
+    {
+        Console.WriteLine("Clicked");
+        Click.InvokeAsync();
+    }
+
+}

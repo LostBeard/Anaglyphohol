@@ -1,0 +1,16 @@
+﻿@page "/viewer"
+
+<h3>Viewer</h3>
+<div>
+    @ImageUrl
+</div>
+<div>
+    <img src="@ImageUrl" />
+</div>
+
+@code {
+
+
+    [SupplyParameterFromQuery]
+    public string? ImageUrl { get; set; }
+}

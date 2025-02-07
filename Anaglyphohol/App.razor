@@ -1,0 +1,24 @@
+﻿@using SpawnDev.BlazorJS.IndexRouting.Routing
+@using Anaglyphohol.Services
+@inject BrowserExtensionService BrowserExtensionService
+
+@if (BrowserExtensionService.ExtensionMode == ExtensionMode.Content)
+{
+    <!-- Running in an extension content context of a web page -->
+    <ContentOverlay AppAssembly="@typeof(App).Assembly"></ContentOverlay>
+}
+else
+{
+    <IndexRouter AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p role="alert">Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </IndexRouter>
+}

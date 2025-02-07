@@ -1,0 +1,154 @@
+﻿@using System.Linq.Expressions
+@{
+    var image = Images != null && Images.Count() > 0 ? Images.ElementAt(_Value) : Image;
+    var icon = Icons != null && Icons.Count() > 0 ? Icons.ElementAt(_Value) : Icon;
+    var style = (Styles != null && Styles.Count() > 0 ? Styles.ElementAt(_Value) : Style) ?? "";
+    var imageStyle = (ImageStyles != null && ImageStyles.Count() > 0 ? ImageStyles.ElementAt(_Value) : ImageStyle) ?? "";
+    var iconStyle = (IconStyles != null && IconStyles.Count() > 0 ? IconStyles.ElementAt(_Value) : IconStyle) ?? "";
+    var classStr = (Classes != null && Classes.Count() > 0 ? Classes.ElementAt(_Value) : Class) ?? "";
+    var textStyle = (TextStyles != null && TextStyles.Count() > 0 ? TextStyles.ElementAt(_Value) : TextStyle) ?? "";
+    var text = (Texts != null && Texts.Count() > 0 ? Texts.ElementAt(_Value) : Text) ?? "";
+}
+
+<button title="@Title" disabled="@Disabled" @ref=_ref class="ui-toggle @classStr" style="@style" @onclick="Clicked">
+    <div style="@ProgressCss" class="@(ShowBusy && BusyProgress == null ? "busy-ring" : "") ui-toggle-progress"></div>
+    <div class="ui-toggle-inner">
+        @if (!string.IsNullOrEmpty(image))
+        {
+            <UIImage Style="@imageStyle" Src="@image" />
+        }
+        else if (!string.IsNullOrEmpty(icon))
+        {
+            <UIIcon Style="@iconStyle" Icon="@icon" />
+        }
+        @if (!string.IsNullOrEmpty(text))
+        {
+            <div style="@($"display:inline-block;{textStyle}")">@text</div>
+        }
+    </div>
+</button>
+
+@code {
+    int _Value { get; set; }
+    bool _ValueSet = false;
+
+    string ProgressCss => ShowBusy && BusyProgress != null ? $"background: conic-gradient(#07e8d644 {Math.Round(BusyProgress.Value)}%, 0, transparent {Math.Round(100f - BusyProgress.Value)}%);" : "";
+
+    /// <summary>
+    /// Progress value of 0.0 - 100.0, or null if not available
+    /// </summary>
+    [Parameter]
+    public float? BusyProgress { get; set; }
+
+    /// <summary>
+    /// If true, a progress indicator will be shown indicating the current progress percent if available
+    /// </summary>
+    [Parameter]
+    public bool ShowBusy { get; set; }
+
+    [Parameter]
+    public int Value
+    {
+        get
+        {
+            return _Value;
+        }
+        set
+        {
+            if (_Value == value) return;
+            if (_ValueSet)
+            {
+                //Console.WriteLine($"Value being set {value} when already set: {_Value}");
+            }
+            else
+            {
+                _Value = value;
+            }
+        }
+    }
+
+    [Parameter]
+    public EventCallback<int> ValueChanged { get; set; }
+
+    public int MaxValue { get; set; } = 0;
+
+    [Parameter]
+    public string? Text { get; set; }
+
+    [Parameter]
+    public IEnumerable<string>? Texts { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string Class { get; set; } = "";
+
+    [Parameter]
+    public IEnumerable<string>? Classes { get; set; }
+
+    [Parameter]
+    public string? Image { get; set; }
+
+    [Parameter]
+    public IEnumerable<string>? Images { get; set; }
+
+    [Parameter]
+    public string? Icon { get; set; }
+
+    [Parameter]
+    public IEnumerable<string>? Icons { get; set; }
+
+    [Parameter]
+    public string Style { get; set; } = "";
+
+    [Parameter]
+    public IEnumerable<string>? Styles { get; set; }
+
+    [Parameter]
+    public string ImageStyle { get; set; } = "";
+
+    [Parameter]
+    public IEnumerable<string>? ImageStyles { get; set; }
+
+    [Parameter]
+    public string IconStyle { get; set; } = "";
+
+    [Parameter]
+    public IEnumerable<string>? IconStyles { get; set; }
+
+    [Parameter]
+    public string TextStyle { get; set; } = "";
+
+    [Parameter]
+    public IEnumerable<string>? TextStyles { get; set; }
+
+    [Parameter]
+    public bool Disabled { get; set; }
+
+    ElementReference _ref;
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> Click { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        MaxValue = (Texts?.Count() ?? Images?.Count() ?? Icons?.Count() ?? Classes?.Count() ?? Styles?.Count() ?? ImageStyles?.Count() ?? TextStyles?.Count() ?? IconStyles?.Count() ?? 1) - 1;
+    }
+    void Clicked(MouseEventArgs mouseEventArgs)
+    {
+        if (_Value == MaxValue)
+        {
+            _Value = 0;
+        }
+        else
+        {
+            _Value += 1;
+        }
+        _ValueSet = true;
+#if DEBUG && false
+        Console.WriteLine($"Value: {_Value}");
+#endif
+        ValueChanged.InvokeAsync(_Value);
+    }
+}

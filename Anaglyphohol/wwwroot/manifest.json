@@ -1,0 +1,73 @@
+{
+  "name": "Anaglyphohol",
+  "description": "View web site images in anaglyph 3D.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "app/red-blue-16.png",
+    "32": "app/red-blue-32.png",
+    "48": "app/red-blue-48.png",
+    "128": "app/red-blue-128.png",
+    "192": "app/red-blue-192.png",
+    "512": "app/red-blue-512.png"
+  },
+  "action": {
+    //"default_popup": "app/index.html?$=popup",
+    "default_icon": "app/red-blue-192.png"
+  },
+  //"options_ui": {
+  //  "page": "app/index.html?$=options",
+  //  "open_in_tab": true
+  //},
+  "background": {
+    /* Chrome and Firefox have incompatible ways of supporting background scripts
+    *  manifest.{PlatformName}.json files will be merged with manifest.json on build to allow
+    *  per-platform and shared manifest entries in platform builds
+    */
+    // "service_worker": "app/background.js"     // Chrome
+    // "page": "app/background.html"              // Firefox
+  },
+  // https://developer.chrome.com/docs/extensions/reference/permissions-list
+  "permissions": [
+    //"webRequest",
+    //"webNavigation",
+    //"scripting",
+    //"tabs",
+    //"activeTab",
+    // contextMenus will be used for right click menu item "View in Anaglyph"
+    //"contextMenus",
+    // declarativeNetRequest is used to workaround issues caused by using WebAssembly in content scripts on some sites (Ex. github.com)
+    //"declarativeNetRequest",
+    //"declarativeNetRequestFeedback",
+    //"declarativeNetRequestWithHostAccess",
+    // store users settings
+    "storage"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  //"host_permissions": [
+  //  "https://*/*",
+  //  "http://*/*",
+  //  "<all_urls>"
+  //],
+  "content_scripts": [
+    {
+      "js": [
+        "app/_content/SpawnDev.BlazorJS.BrowserExtension/browser-polyfill.min.js",
+        "app/_content/SpawnDev.BlazorJS.BrowserExtension/content-bridge.js",
+        "app/_content/SpawnDev.BlazorJS.BrowserExtension/content.js"
+      ],
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [ "<all_urls>" ],
+      "resources": [
+        "app/*"
+      ]
+    }
+  ]
+}

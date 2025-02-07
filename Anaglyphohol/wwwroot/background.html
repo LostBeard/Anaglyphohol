@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anaglyphohol</title>
+    <base href="/app/" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="Anaglyphohol.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+    <div id="spawndev-extension">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <script webworker-enabled src="_content/SpawnDev.BlazorJS.BrowserExtension/browser-polyfill.min.js"></script>
+
+    <script src="background.common.js"></script>
+    <!-- autostart is set to false so we can detect SIMD support and load the appropriate build -->
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <!--
+        WASM Feature Detect - from GoogleChromeLabs
+        CDN UMD Version: https://unpkg.com/wasm-feature-detect/dist/umd/index.js
+        Repo: https://github.com/GoogleChromeLabs/wasm-feature-detect
+    -->
+    <script webworker-enabled src="wasm-feature-detect.1.8.0.js"></script>
+    <!--
+        The below script tag is used to detect SIMD support on the running device and load the appropriate build
+        If SIMD is not supported it loads _frameworkCompat/ instead of _framework/
+    -->
+    <script webworker-enabled src="blazor.loader.js"></script>
+</body>
+
+</html>

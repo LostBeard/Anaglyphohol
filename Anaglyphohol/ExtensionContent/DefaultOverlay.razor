@@ -1,0 +1,9 @@
+﻿@attribute [ContentLocation(@"http")]
+
+<div style="@(initComplete ? "" : "display: none;")">
+    <UIToggle Value="@AutoAnaglyphAll" ValueChanged=@AutoAnaglyphAll_OnClicked Text="" Title="Enable" Icons="@(new string[]{"radio_button_unchecked","radio_button_checked"})" />
+    <UIToggle Value="@AnaglyphProfile" ValueChanged=@AnaglyphProfile_OnClicked Text="" Title="Mode" Images="@(new []{ "red-blue-32.png", "green-magenta-32.png" })" />
+</div>
+@code {
+
+}

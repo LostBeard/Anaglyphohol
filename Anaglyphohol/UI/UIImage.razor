@@ -1,0 +1,21 @@
+﻿<img src="@Url" class="@Class" style="@Style">
+@code {
+    [Parameter]
+    public string Class { get; set; } = "";
+
+    [Parameter]
+    public string Style { get; set; } = "";
+
+    [Parameter]
+    public string Src { get; set; } = "";
+
+    [Inject]
+    BrowserExtensionService BrowserExtensionService { get; set; }
+
+    string Url = "";
+
+    protected override void OnParametersSet()
+    {
+        Url = BrowserExtensionService.GetURL(Src);
+    }
+}

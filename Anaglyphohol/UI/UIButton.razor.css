@@ -1,0 +1,30 @@
+﻿button {
+    padding: 4px 2px 2px 2px;
+    margin: 0;
+    border-radius: 1.5em;
+    vertical-align: middle;
+    border: 0;
+    color: #dddddd;
+    background-color: #120101;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #191616;
+    }
+
+    button:active {
+        background-color: #393636;
+    }
+
+    button[disabled] {
+        opacity: 0.2;
+        cursor: auto;
+    }
+        button[disabled]:hover {
+            background-color: #120101;
+        }
+
+        button[disabled]:active {
+            background-color: #120101;
+        }
