@@ -11,7 +11,7 @@ Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks
 ## Installing in development mode (bypass Chrome Store)
 Anaglyphohol has been submitted to the Chrome but has not yet been approved. If you would like to install the extension now or simply want to run the latest version, you can install it in Chrome in development mode.
 
-### To load a browser extension into Chrome development mode
+### To load Anaglyphohol using Chrome development mode
 - Unpack the Anaglyphohol release zip.
 - Navigate to "chrome://extensions" in your browser
 - Enable "Developer mode" at the top right
