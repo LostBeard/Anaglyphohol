@@ -5,6 +5,8 @@ Anaglyphohol is a web browser extension that let's you view images on the web in
 ## Development
 Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks to the amazing monocular depth estimation machine learning model [Depth Anything](https://huggingface.co/depth-anything/Depth-Anything-V2-Small).
 
+Currently only Google Chrome on Windows ahs been tested. Firefox desktop support is planned.
+
 ## Screenshots
 ![Screenshot 4](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
 ![Screenshot 4](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
