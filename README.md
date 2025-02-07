@@ -19,7 +19,9 @@ Anaglyphohol adds a border to images it identifies for conversion when enabled.
 - None - Not supported (too small... less than 100x100), or not an `<img>` element.
 
 ## Screenshots
+Bing image search in red cyan  
 ![Screenshot Bing Red Cyan](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
+Google image search in green magenta  
 ![Screenshot Google Green Magenta](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
 
 ## Installing in development mode (bypass Chrome Store)
