@@ -8,8 +8,8 @@ Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks
 Currently only Google Chrome on Windows ahs been tested. Firefox desktop support is planned.
 
 ## Screenshots
-![Screenshot 4](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
-![Screenshot 4](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
+![Screenshot Bing Red Cyan](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
+![Screenshot Google Green Magenta](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
 
 ## Installing in development mode (bypass Chrome Store)
 Anaglyphohol has been submitted to the Chrome but has not yet been approved. If you would like to install the extension now or simply want to run the latest version, you can install it in Chrome in development mode.
