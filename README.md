@@ -20,8 +20,6 @@ If you want to install your own build of Anaglyphohol or simply want to run the 
 ## Notes
 Images are added to the conversion queue in the order they are found. Moving your mouse over an image will move the image to the front of the queue.
 
-Only images with a size of at least 100x100 are converted.
-
 Anaglyphohol adds a border to images it identifies for conversion when enabled. 
 - Orange - queued for conversion
 - Green - already converted and showing the anaglyph image
