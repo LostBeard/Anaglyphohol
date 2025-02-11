@@ -165,6 +165,11 @@ namespace Anaglyphohol.Services
         }
         bool Running = false;
         List<TrackedImage> ToAnaglyph = new List<TrackedImage>();
+        /// <summary>
+        /// Checks the tracked element to see if it should be added to the queue for processing
+        /// </summary>
+        /// <param name="trackedElement"></param>
+        /// <param name="jumpToFrontOfLine"></param>
         void CheckTrackedElement(TrackedImage trackedElement, bool jumpToFrontOfLine = false)
         {
             if (CurrentJob?.UID == trackedElement.UID)
