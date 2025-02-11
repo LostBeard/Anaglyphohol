@@ -27,16 +27,16 @@ Anaglyphohol adds a border to images it identifies for conversion when enabled.
 - Red - conversion failed (may requeue)
 - None - Not supported (too small... less than 100x100), or not an `<img>` element.
 
-## Known issues
-- Currently only Google Chrome on Windows has been tested. Firefox desktop support is planned. 
-- Some websites and some images on websites do not work. Ex. Google Photos does not work.
-- Almost not user configurable settings. User settings are planned.
-
 ## Screenshots
 Bing image search in red cyan  
 ![Screenshot Bing Red Cyan](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
 Google image search in green magenta  
 ![Screenshot Google Green Magenta](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
+
+## Known issues
+- Currently only Google Chrome on Windows has been tested. Firefox desktop support is planned. 
+- Some websites and some images on websites do not work. Ex. Google Photos does not work.
+- Almost not user configurable settings. User settings are planned.
 
 ## Building
 You can download Anaglyphohol, make changes, and build it yourself. The Blazor WebAssembly library [SpawnDev.BlazorJS.BrowserExtension](https://github.com/LostBeard/SpawnDev.BlazorJS.BrowserExtension) is used to interact with the extension APIs. If you have any questions or issues, don't hesitate to open an issue.
