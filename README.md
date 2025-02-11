@@ -35,7 +35,7 @@ Google image search in green magenta
 
 ## Known issues
 - Currently only Google Chrome on Windows has been tested. Firefox desktop support is planned. 
-- Some websites and some images on websites do not work. Ex. Google Photos does not work.
+- Some websites and images do not work. Ex. Google Photos does not work.
 - Minimal user settings. Additional user settings are planned.
 
 ## Building
