@@ -2,15 +2,24 @@
 
 Anaglyphohol is a web browser extension that let's you view images on the web in anaglyph 3D. It supports green magenta, and red cyan glasses. View image search results in 3D on google.com, bing.com, and yahoo.com. Use Anaglyphohol on on almost any website. 
 
-## Development
 Anaglyphohol is developed using Blazor WebAssembly. The 2D to 3D magic is thanks to the amazing monocular depth estimation machine learning model [Depth Anything](https://huggingface.co/depth-anything/Depth-Anything-V2-Small).
 
-## Known issues
-- Currently only Google Chrome on Windows has been tested. Firefox desktop support is planned. 
-- Some websites and some images on websites do not work. Ex. Google Photos does not work.
-- Almost not user configurable settings. User settings are planned.
+## Installing from Chrome Web Store
+Anaglyphohol on the Chrome Web Store: [Anaglyphohol](https://chromewebstore.google.com/detail/anaglyphohol/fjbffnhfchidmfcbecccnmdedjahankc)  
+  
+  It is recommended that you pin the Anaglyphohol extension button to the Chrome toolbar.  Anaglyphohol will create a transparent clickable icon at the top center of the webpage it loads on. Clicking this icon will toggle the UI which allows switching anaglyph modes, and toggling anaglyph mode on and off.
+
+## Installing in development mode (bypass Chrome Store)
+If you want to install your own build of Anaglyphohol or simply want to run the latest version before it is available on the Chrome Web Store, you can install it using Chrome in development mode.
+
+- Unpack the Anaglyphohol [release](https://github.com/LostBeard/Anaglyphohol/releases) zip.
+- Navigate to "chrome://extensions" in your browser
+- Enable "Developer mode" at the top right
+- Click "Load unpacked" and select the folder where you unpacked Anaglyphohol.
 
 ## Notes
+Images are added to the conversion queue in the order they are found. Moving your mouse over an image will move the image to the front of the queue.
+
 Anaglyphohol adds a border to images it identifies for conversion when enabled. 
 - Orange - queued for conversion
 - Green - already converted and showing the anaglyph image
@@ -18,29 +27,16 @@ Anaglyphohol adds a border to images it identifies for conversion when enabled.
 - Red - conversion failed (may requeue)
 - None - Not supported (too small... less than 100x100), or not an `<img>` element.
 
-### Conversion priority
-Images are added to the conversion queue in the order they are found. Moving your mouse over an image will move the image to the front of the queue.
+## Known issues
+- Currently only Google Chrome on Windows has been tested. Firefox desktop support is planned. 
+- Some websites and some images on websites do not work. Ex. Google Photos does not work.
+- Almost not user configurable settings. User settings are planned.
 
 ## Screenshots
 Bing image search in red cyan  
 ![Screenshot Bing Red Cyan](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/BingRedCyan.jpg)  
 Google image search in green magenta  
 ![Screenshot Google Green Magenta](https://raw.githubusercontent.com/LostBeard/Anaglyphohol/main/Anaglyphohol/wwwroot/screenshots/GoogleGreenMagenta1.jpg)   
-
-## Installing from Chrome Web Store
-
-Anaglyphohol can be installed form the Chrome Web Store: [Anaglyphohol](https://chromewebstore.google.com/detail/anaglyphohol/fjbffnhfchidmfcbecccnmdedjahankc)
-
-## Installing in development mode (bypass Chrome Store)
-If you want to install your own build of Anaglyphohol or simply want to run the latest version before it is available on the Chrome Web Store, you can install it using Chrome in development mode.
-
-### Install steps
-- Unpack the Anaglyphohol [release](https://github.com/LostBeard/Anaglyphohol/releases) zip.
-- Navigate to "chrome://extensions" in your browser
-- Enable "Developer mode" at the top right
-- Click "Load unpacked" and select the folder where you unpacked Anaglyphohol.
-
-It is recommended that you pin the Anaglyphohol extension button to the Chrome toolbar.  Anaglyphohol will create a transparent clickable icon at the top center of the webpage it loads on. Clicking this icon will toggle the UI which allows switching anaglyph modes, and toggling anaglyph mode on and off.
 
 ## Building
 You can download Anaglyphohol, make changes, and build it yourself. The Blazor WebAssembly library [SpawnDev.BlazorJS.BrowserExtension](https://github.com/LostBeard/SpawnDev.BlazorJS.BrowserExtension) is used to interact with the extension APIs. If you have any questions or issues, don't hesitate to open an issue.
