@@ -50,14 +50,14 @@ To create a `Debug` build of Anaglyphohol run `_buildDebug.bat` in the project f
 ### Release Build
 To create a `Release` build of Anaglyphohol run `_buildRelease.bat` in the project folder. Builds for both Firefox and Chrome will be created in the `Anaglyphohol\bin\PublishRelease\` folder. The build can be loaded into Firefox and Chrome using development mode. Zip files containing the extension will also be built for Firefox and Chrome.
 
-# Get Support
+## Get Support
 Issues and feature requests can be submitted [here](https://github.com/LostBeard/Anaglyphohol/issues) on GitHub. We are always here to help.
 
-# Support Us
+## Support Us
 Sponsor us via GitHub Sponsors to give us more time to work on Anaglyphohol and other open source projects. Or buy us a cup of coffee via Paypal. All support is greatly appreciated! ♥
 
 [![GitHub Sponsor](https://img.shields.io/github/sponsors/LostBeard?label=Sponsor&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/LostBeard)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2F6VANCK2EMEY)
 
-# Thanks
+## Thanks
 Thank you to everyone who has helped!
