@@ -20,6 +20,8 @@ If you want to install your own build of Anaglyphohol or simply want to run the 
 ## Notes
 Images are added to the conversion queue in the order they are found. Moving your mouse over an image will move the image to the front of the queue.
 
+Only images with a size of at least 100x100 are converted.
+
 Anaglyphohol adds a border to images it identifies for conversion when enabled. 
 - Orange - queued for conversion
 - Green - already converted and showing the anaglyph image
@@ -36,7 +38,7 @@ Google image search in green magenta
 ## Known issues
 - Currently only Google Chrome on Windows has been tested. Firefox desktop support is planned. 
 - Some websites and some images on websites do not work. Ex. Google Photos does not work.
-- Almost not user configurable settings. User settings are planned.
+- Minimal user settings. Additional user settings are planned.
 
 ## Building
 You can download Anaglyphohol, make changes, and build it yourself. The Blazor WebAssembly library [SpawnDev.BlazorJS.BrowserExtension](https://github.com/LostBeard/SpawnDev.BlazorJS.BrowserExtension) is used to interact with the extension APIs. If you have any questions or issues, don't hesitate to open an issue.
@@ -54,7 +56,7 @@ To create a `Release` build of Anaglyphohol run `_buildRelease.bat` in the proje
 Issues and feature requests can be submitted [here](https://github.com/LostBeard/Anaglyphohol/issues) on GitHub. We are always here to help.
 
 # Support Us
-Sponsor us via Github Sponsors to give us more time to work on Anaglyphohol and other open source projects. Or buy us a cup of coffee via Paypal. All support is greatly appreciated! ♥
+Sponsor us via GitHub Sponsors to give us more time to work on Anaglyphohol and other open source projects. Or buy us a cup of coffee via Paypal. All support is greatly appreciated! ♥
 
 [![GitHub Sponsor](https://img.shields.io/github/sponsors/LostBeard?label=Sponsor&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/LostBeard)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2F6VANCK2EMEY)
