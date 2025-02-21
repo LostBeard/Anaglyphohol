@@ -19,14 +19,14 @@
   //  "page": "app/index.html?$=options",
   //  "open_in_tab": true
   //},
-  "background": {
-    /* Chrome and Firefox have incompatible ways of supporting background scripts
-    *  manifest.{PlatformName}.json files will be merged with manifest.json on build to allow
-    *  per-platform and shared manifest entries in platform builds
-    */
-    // "service_worker": "app/background.js"     // Chrome
-    // "page": "app/background.html"              // Firefox
-  },
+  //"background": {
+  //  /* Chrome and Firefox have incompatible ways of supporting background scripts
+  //  *  manifest.{PlatformName}.json files will be merged with manifest.json on build to allow
+  //  *  per-platform and shared manifest entries in platform builds
+  //  */
+  //  // "service_worker": "app/background.js"     // Chrome
+  //  // "page": "app/background.html"              // Firefox
+  //},
   // https://developer.chrome.com/docs/extensions/reference/permissions-list
   "permissions": [
     //"webRequest",

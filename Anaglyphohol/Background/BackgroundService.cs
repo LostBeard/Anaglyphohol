@@ -101,7 +101,7 @@ namespace Anaglyphohol.Background
             using var contextMenus = BrowserExtensionService.Browser!.ContextMenus;
             // TODO check before adding... may have already been added
             // usually just added on install, but not sure if we miss that event while Blazor is loading (not async app friendly event)
-            using var id = contextMenus.Create(new CreateProperties
+            using var id = contextMenus.Create(new MenuItemProperties
             {
                 Title = "View Anaglyph Image",
                 Id = "view_anaglyph",

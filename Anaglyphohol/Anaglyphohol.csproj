@@ -49,20 +49,20 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.11" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" PrivateAssets="all" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<!-- Required by SpawnDev.BlazorJS.BrowserExtension -->
-		<PackageReference Include="SpawnDev.BlazorJS" Version="2.5.39" />
-		<PackageReference Include="SpawnDev.BlazorJS.WebWorkers" Version="2.5.39" />
+		<PackageReference Include="SpawnDev.BlazorJS" Version="2.6.0" />
+		<PackageReference Include="SpawnDev.BlazorJS.WebWorkers" Version="2.6.0" />
 		<!-- Required by SpawnDev.BlazorJS.IndexRouting -->
 		<PackageReference Include="SpawnDev.BlazorJS.IndexRouting" Version="1.0.0" />
 		<!-- App specific -->
 		<!-- Required by SpawnDev.BlazorJS.TransformersJS -->
 		<PackageReference Include="SpawnDev.BlazorJS.TransformersJS" Version="1.0.0-preview.6" />
 		<!-- SpawnDev.BlazorJS.BrowserExtension -->
-		<PackageReference Include="SpawnDev.BlazorJS.BrowserExtension" Version="1.0.0-preview.7" />
+		<PackageReference Include="SpawnDev.BlazorJS.BrowserExtension" Version="1.0.0-preview.14" />
 	</ItemGroup>
 	
 	<ItemGroup>
